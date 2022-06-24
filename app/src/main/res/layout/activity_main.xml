@@ -57,8 +57,8 @@
         android:id="@+id/person_small_body_1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:src="@drawable/ic_person_body"
         android:layout_marginBottom="16dp"
+        android:src="@drawable/ic_person_body"
         app:layout_constraintBottom_toBottomOf="@+id/person_head_1"
         app:layout_constraintEnd_toEndOf="@+id/person_head_1"
         app:layout_constraintStart_toStartOf="@+id/person_head_1" />
@@ -100,8 +100,8 @@
         android:id="@+id/person_small_body_2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:src="@drawable/ic_person_body"
         android:layout_marginBottom="16dp"
+        android:src="@drawable/ic_person_body"
         app:layout_constraintBottom_toBottomOf="@+id/person_head_2"
         app:layout_constraintEnd_toEndOf="@+id/person_head_2"
         app:layout_constraintStart_toStartOf="@+id/person_head_2" />
@@ -135,8 +135,8 @@
         android:layout_marginTop="100dp"
         android:layout_marginEnd="50dp"
         android:background="@drawable/circle"
-        android:text="@string/next"
         android:paddingEnd="30dp"
+        android:text="@string/next"
         android:textAlignment="center"
         android:textColor="@color/white"
         app:layout_constraintEnd_toEndOf="parent"
@@ -145,13 +145,13 @@
     <androidx.appcompat.widget.AppCompatImageView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:src="@drawable/ic_arrow_front"
         android:layout_marginStart="50dp"
-        android:elevation="2dp"
-        app:layout_constraintStart_toStartOf="@id/btn_next"
+        android:elevation="10dp"
+        android:src="@drawable/ic_arrow_front"
+        app:layout_constraintBottom_toBottomOf="@id/btn_next"
         app:layout_constraintEnd_toEndOf="@id/btn_next"
-        app:layout_constraintTop_toTopOf="@id/btn_next"
-        app:layout_constraintBottom_toBottomOf="@id/btn_next"/>
+        app:layout_constraintStart_toStartOf="@id/btn_next"
+        app:layout_constraintTop_toTopOf="@id/btn_next" />
 
     <androidx.appcompat.widget.AppCompatButton
         android:id="@+id/btn_back"
