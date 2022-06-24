@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">SignUp Design</string>
+    <string name="hello">Hello!</string>
+    <string name="let_s_introduce">let\'s Introduce</string>
+    <string name="your_full_name">Your Full Name</string>
+    <string name="username">Username</string>
+    <string name="next">Next</string>
+</resources>

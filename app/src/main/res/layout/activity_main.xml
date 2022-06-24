@@ -1,0 +1,171 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/navy_green"
+    tools:context=".MainActivity">
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="110dp"
+        android:src="@drawable/circle"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/tv_hello"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="30dp"
+        android:fontFamily="@font/sfrpro"
+        android:text="@string/hello"
+        android:textColor="@color/white"
+        android:textSize="42sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/button" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/tv_letsintroduce"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="15dp"
+        android:fontFamily="@font/sfrpro"
+        android:text="@string/let_s_introduce"
+        android:textColor="@color/light_grey"
+        android:textSize="24sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tv_hello" />
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/person_head_1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="50dp"
+        android:src="@drawable/personhead"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tv_letsintroduce" />
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/person_small_body_1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/ic_person_body"
+        android:layout_marginBottom="16dp"
+        app:layout_constraintBottom_toBottomOf="@+id/person_head_1"
+        app:layout_constraintEnd_toEndOf="@+id/person_head_1"
+        app:layout_constraintStart_toStartOf="@+id/person_head_1" />
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/person_small_head_1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/ic_person_head"
+        app:layout_constraintBottom_toTopOf="@+id/person_small_body_1"
+        app:layout_constraintEnd_toEndOf="@+id/person_head_1"
+        app:layout_constraintStart_toStartOf="@+id/person_head_1" />
+
+    <androidx.appcompat.widget.AppCompatEditText
+        android:id="@+id/tv_your_full_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="40dp"
+        android:fontFamily="@font/sfrpro"
+        android:hint="@string/your_full_name"
+        android:textColor="@color/light_grey"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toBottomOf="@+id/person_head_1"
+        app:layout_constraintStart_toEndOf="@+id/person_head_1"
+        app:layout_constraintTop_toTopOf="@+id/person_head_1" />
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/person_head_2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="30dp"
+        android:src="@drawable/personhead"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/person_head_1" />
+
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/person_small_body_2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/ic_person_body"
+        android:layout_marginBottom="16dp"
+        app:layout_constraintBottom_toBottomOf="@+id/person_head_2"
+        app:layout_constraintEnd_toEndOf="@+id/person_head_2"
+        app:layout_constraintStart_toStartOf="@+id/person_head_2" />
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/person_small_head_2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/ic_person_head"
+        app:layout_constraintBottom_toTopOf="@+id/person_small_body_2"
+        app:layout_constraintEnd_toEndOf="@+id/person_head_2"
+        app:layout_constraintStart_toStartOf="@+id/person_head_2" />
+
+    <androidx.appcompat.widget.AppCompatEditText
+        android:id="@+id/tv_username"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="40dp"
+        android:fontFamily="@font/sfrpro"
+        android:hint="@string/username"
+        android:textColor="@color/light_grey"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toBottomOf="@+id/person_head_2"
+        app:layout_constraintStart_toEndOf="@+id/person_head_2"
+        app:layout_constraintTop_toTopOf="@+id/person_head_2" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/btn_next"
+        android:layout_width="245dp"
+        android:layout_height="58dp"
+        android:layout_marginTop="100dp"
+        android:layout_marginEnd="50dp"
+        android:background="@drawable/circle"
+        android:text="@string/next"
+        android:paddingEnd="30dp"
+        android:textAlignment="center"
+        android:textColor="@color/white"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tv_username" />
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/ic_arrow_front"
+        android:layout_marginStart="50dp"
+        android:elevation="2dp"
+        app:layout_constraintStart_toStartOf="@id/btn_next"
+        app:layout_constraintEnd_toEndOf="@id/btn_next"
+        app:layout_constraintTop_toTopOf="@id/btn_next"
+        app:layout_constraintBottom_toBottomOf="@id/btn_next"/>
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/btn_back"
+        android:layout_width="60dp"
+        android:layout_height="58dp"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="100dp"
+        android:background="@drawable/circle_back_button"
+        android:drawableStart="@drawable/ic_arrow_back"
+        android:paddingStart="20dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tv_username"
+
+        />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
