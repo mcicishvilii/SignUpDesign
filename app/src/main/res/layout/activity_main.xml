@@ -7,6 +7,21 @@
     android:background="@color/navy_green"
     tools:context=".MainActivity">
 
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/left_guideline"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.05" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/right_guideline"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.95" />
+
     <androidx.appcompat.widget.AppCompatImageView
         android:id="@+id/button"
         android:layout_width="wrap_content"
@@ -14,7 +29,7 @@
         android:layout_marginStart="32dp"
         android:layout_marginTop="110dp"
         android:src="@drawable/circle"
-        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintStart_toStartOf="@id/left_guideline"
         app:layout_constraintTop_toTopOf="parent" />
 
     <androidx.appcompat.widget.AppCompatTextView
@@ -27,7 +42,7 @@
         android:text="@string/hello"
         android:textColor="@color/white"
         android:textSize="42sp"
-        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintStart_toStartOf="@id/left_guideline"
         app:layout_constraintTop_toBottomOf="@id/button" />
 
     <androidx.appcompat.widget.AppCompatTextView
@@ -40,7 +55,7 @@
         android:text="@string/let_s_introduce"
         android:textColor="@color/light_grey"
         android:textSize="24sp"
-        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintStart_toStartOf="@id/left_guideline"
         app:layout_constraintTop_toBottomOf="@id/tv_hello" />
 
     <androidx.appcompat.widget.AppCompatImageView
@@ -49,9 +64,12 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="32dp"
         android:layout_marginTop="50dp"
+        android:layout_marginEnd="-90dp"
         android:src="@drawable/personhead"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/tv_letsintroduce" />
+        app:layout_constraintBottom_toTopOf="@+id/person_head_2"
+        app:layout_constraintEnd_toStartOf="@id/tv_your_full_name"
+        app:layout_constraintStart_toStartOf="@id/left_guideline"
+        app:layout_constraintTop_toBottomOf="@+id/tv_letsintroduce" />
 
     <androidx.appcompat.widget.AppCompatImageView
         android:id="@+id/person_small_body_1"
@@ -74,26 +92,47 @@
 
     <androidx.appcompat.widget.AppCompatEditText
         android:id="@+id/tv_your_full_name"
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginStart="40dp"
+        android:layout_marginStart="100dp"
+        android:layout_marginEnd="50dp"
         android:fontFamily="@font/sfrpro"
         android:hint="@string/your_full_name"
+        android:minHeight="48dp"
         android:textColor="@color/light_grey"
         android:textSize="18sp"
         app:layout_constraintBottom_toBottomOf="@+id/person_head_1"
+        app:layout_constraintEnd_toEndOf="@id/right_guideline"
         app:layout_constraintStart_toEndOf="@+id/person_head_1"
         app:layout_constraintTop_toTopOf="@+id/person_head_1" />
+
+    <androidx.appcompat.widget.AppCompatEditText
+        android:id="@+id/tv_username"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="100dp"
+        android:layout_marginEnd="50dp"
+        android:fontFamily="@font/sfrpro"
+        android:hint="@string/username"
+        android:minHeight="48dp"
+        android:textColor="@color/light_grey"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toBottomOf="@+id/person_head_2"
+        app:layout_constraintEnd_toStartOf="@+id/right_guideline"
+        app:layout_constraintStart_toEndOf="@+id/person_head_2"
+        app:layout_constraintTop_toTopOf="@+id/person_head_2" />
 
     <androidx.appcompat.widget.AppCompatImageView
         android:id="@+id/person_head_2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="32dp"
-        android:layout_marginTop="30dp"
+        android:layout_marginTop="40dp"
+        android:layout_marginEnd="-90dp"
         android:src="@drawable/personhead"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/person_head_1" />
+        app:layout_constraintEnd_toStartOf="@id/tv_username"
+        app:layout_constraintStart_toStartOf="@id/left_guideline"
+        app:layout_constraintTop_toBottomOf="@+id/person_head_1" />
 
 
     <androidx.appcompat.widget.AppCompatImageView
@@ -115,57 +154,50 @@
         app:layout_constraintEnd_toEndOf="@+id/person_head_2"
         app:layout_constraintStart_toStartOf="@+id/person_head_2" />
 
-    <androidx.appcompat.widget.AppCompatEditText
-        android:id="@+id/tv_username"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="40dp"
-        android:fontFamily="@font/sfrpro"
-        android:hint="@string/username"
-        android:textColor="@color/light_grey"
-        android:textSize="18sp"
-        app:layout_constraintBottom_toBottomOf="@+id/person_head_2"
-        app:layout_constraintStart_toEndOf="@+id/person_head_2"
-        app:layout_constraintTop_toTopOf="@+id/person_head_2" />
 
     <androidx.appcompat.widget.AppCompatButton
         android:id="@+id/btn_next"
-        android:layout_width="245dp"
-        android:layout_height="58dp"
-        android:layout_marginTop="100dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="200dp"
         android:layout_marginEnd="50dp"
+        android:layout_marginBottom="120dp"
         android:background="@drawable/circle"
         android:paddingEnd="30dp"
         android:text="@string/next"
         android:textAlignment="center"
         android:textColor="@color/white"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/tv_username" />
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@id/right_guideline"
+        app:layout_constraintStart_toEndOf="@id/btn_back" />
 
     <androidx.appcompat.widget.AppCompatImageView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="50dp"
+        android:layout_marginStart="220dp"
+        android:layout_marginEnd="90dp"
         android:elevation="10dp"
         android:src="@drawable/ic_arrow_front"
         app:layout_constraintBottom_toBottomOf="@id/btn_next"
         app:layout_constraintEnd_toEndOf="@id/btn_next"
-        app:layout_constraintStart_toStartOf="@id/btn_next"
+        app:layout_constraintStart_toEndOf="@id/btn_back"
         app:layout_constraintTop_toTopOf="@id/btn_next" />
 
     <androidx.appcompat.widget.AppCompatButton
         android:id="@+id/btn_back"
         android:layout_width="60dp"
-        android:layout_height="58dp"
+        android:layout_height="wrap_content"
         android:layout_marginStart="32dp"
-        android:layout_marginTop="100dp"
+        android:layout_marginEnd="-110dp"
+        android:layout_marginBottom="120dp"
         android:background="@drawable/circle_back_button"
         android:drawableStart="@drawable/ic_arrow_back"
         android:paddingStart="20dp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/tv_username"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/btn_next"
+        app:layout_constraintHorizontal_chainStyle="packed"
 
-        />
+        app:layout_constraintStart_toStartOf="@id/left_guideline" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
