@@ -136,12 +136,12 @@
                 android:id="@+id/button2"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:background="@drawable/circle"
+                android:background="@drawable/gradient_button"
                 android:gravity="center|bottom"
+                android:paddingEnd="20dp"
                 android:paddingBottom="10dp"
                 android:text="@string/next"
                 android:textColor="@color/white"
-                android:paddingEnd="20dp"
                 android:textSize="18sp" />
 
             <androidx.appcompat.widget.AppCompatImageView
